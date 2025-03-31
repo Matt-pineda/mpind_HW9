@@ -13,38 +13,40 @@
 
     <!-- Font Awesome -->
     <script
-    src="https://kit.fontawesome.com/yourkitcode.js" crossorigin="anonymous"></script>
+      src="https://kit.fontawesome.com/yourkitcode.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
-        .fontawesome {
-          font-size: 1.15rem;
-          color: #333333;
-        }
-      
-        .tooltip {
-          position: relative;
-          display: inline-block;
-        }
-      
-        .tooltip .tooltiptext {
-          visibility: hidden;
-          width: 250px;
-          background-color: #333333;
-          color: #f8f8f8;
-          font-size: 1rem;
-          text-align: left;
-          border-radius: 6px;
-          padding: 12px;
-          position: absolute;
-          z-index: 1;
-          top: 100%;
-          left: 50%;
-          margin-left: -125px;
-        }
-      
-        .tooltip:hover .tooltiptext {
-          visibility: visible;
-        }
-      </style>
+      .fontawesome {
+        font-size: 1.15rem;
+        color: #333333;
+      }
+
+      .tooltip {
+        position: relative;
+        display: inline-block;
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 250px;
+        background-color: #333333;
+        color: #f8f8f8;
+        font-size: 1rem;
+        text-align: left;
+        border-radius: 6px;
+        padding: 12px;
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 50%;
+        margin-left: -125px;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
+    </style>
   </head>
   <body>
     <main class="container">
@@ -90,7 +92,9 @@
               <span class="tooltip">
                 <i class="fa-solid fa-circle-info fontawesome"></i>
                 <span class="tooltiptext">
-                  Letting us know how you identify yourself helps us measure and enhance diversity and inclusivity in tech by addressing historical gender imbalances.
+                  Letting us know how you identify yourself helps us measure and
+                  enhance diversity and inclusivity in tech by addressing
+                  historical gender imbalances.
                 </span>
               </span>
             </label>
@@ -104,82 +108,95 @@
             </select>
           </div>
           <div class="mb-3">
-            <label for="state-select" class="form-label">State or Territory</label>
-            <select name="state" id="state-select" class="form-select">
+            <label for="state-select" class="form-label"
+              >State or Territory</label
+            >
+            <select name="state" id="state-select">
               <option value="">-- choose state/territory --</option>
-              <<select name="state" id="state-select">
-                <option value="">-- choose state/territory --</option>
-                <option value="AL">AL</option>
-                <option value="AK">AK</option>
-                <option value="AZ">AZ</option>
-                <option value="AR">AR</option>
-                <option value="CA">CA</option>
-                <option value="CO">CO</option>
-                <option value="CT">CT</option>
-                <option value="DE">DE</option>
-                <option value="FL">FL</option>
-                <option value="GA">GA</option>
-                <option value="HI">HI</option>
-                <option value="ID">ID</option>
-                <option value="IL">IL</option>
-                <option value="IN">IN</option>
-                <option value="IA">IA</option>
-                <option value="KS">KS</option>
-                <option value="KY">KY</option>
-                <option value="LA">LA</option>
-                <option value="ME">ME</option>
-                <option value="MD">MD</option>
-                <option value="MA">MA</option>
-                <option value="MI">MI</option>
-                <option value="MN">MN</option>
-                <option value="MS">MS</option>
-                <option value="MO">MO</option>
-                <option value="MT">MT</option>
-                <option value="NE">NE</option>
-                <option value="NV">NV</option>
-                <option value="NH">NH</option>
-                <option value="NJ">NJ</option>
-                <option value="NM">NM</option>
-                <option value="NY">NY</option>
-                <option value="NC">NC</option>
-                <option value="ND">ND</option>
-                <option value="OH">OH</option>
-                <option value="OK">OK</option>
-                <option value="OR">OR</option>
-                <option value="PA">PA</option>
-                <option value="RI">RI</option>
-                <option value="SC">SC</option>
-                <option value="SD">SD</option>
-                <option value="TN">TN</option>
-                <option value="TX">TX</option>
-                <option value="UT">UT</option>
-                <option value="VT">VT</option>
-                <option value="VA">VA</option>
-                <option value="WA">WA</option>
-                <option value="WV">WV</option>
-                <option value="WI">WI</option>
-                <option value="WY">WY</option>
-                <!-- Added Washington D.C. -->
-                <option value="DC">DC - Washington D.C.</option>
-                <!-- Added U.S. Territories -->
-                <option value="AS">AS - American Samoa</option>
-                <option value="GU">GU - Guam</option>
-                <option value="MP">MP - Northern Mariana Islands</option>
-                <option value="PR">PR - Puerto Rico</option>
-                <option value="VI">VI - U.S. Virgin Islands</option>>
+              <option value="AL">AL</option>
+              <option value="AK">AK</option>
+              <option value="AZ">AZ</option>
+              <option value="AR">AR</option>
+              <option value="CA">CA</option>
+              <option value="CO">CO</option>
+              <option value="CT">CT</option>
+              <option value="DE">DE</option>
+              <option value="FL">FL</option>
+              <option value="GA">GA</option>
+              <option value="HI">HI</option>
+              <option value="ID">ID</option>
+              <option value="IL">IL</option>
+              <option value="IN">IN</option>
+              <option value="IA">IA</option>
+              <option value="KS">KS</option>
+              <option value="KY">KY</option>
+              <option value="LA">LA</option>
+              <option value="ME">ME</option>
+              <option value="MD">MD</option>
+              <option value="MA">MA</option>
+              <option value="MI">MI</option>
+              <option value="MN">MN</option>
+              <option value="MS">MS</option>
+              <option value="MO">MO</option>
+              <option value="MT">MT</option>
+              <option value="NE">NE</option>
+              <option value="NV">NV</option>
+              <option value="NH">NH</option>
+              <option value="NJ">NJ</option>
+              <option value="NM">NM</option>
+              <option value="NY">NY</option>
+              <option value="NC">NC</option>
+              <option value="ND">ND</option>
+              <option value="OH">OH</option>
+              <option value="OK">OK</option>
+              <option value="OR">OR</option>
+              <option value="PA">PA</option>
+              <option value="RI">RI</option>
+              <option value="SC">SC</option>
+              <option value="SD">SD</option>
+              <option value="TN">TN</option>
+              <option value="TX">TX</option>
+              <option value="UT">UT</option>
+              <option value="VT">VT</option>
+              <option value="VA">VA</option>
+              <option value="WA">WA</option>
+              <option value="WV">WV</option>
+              <option value="WI">WI</option>
+              <option value="WY">WY</option>
+              <!-- Added Washington D.C. -->
+              <option value="DC">DC - Washington D.C.</option>
+              <!-- Added U.S. Territories -->
+              <option value="AS">AS - American Samoa</option>
+              <option value="GU">GU - Guam</option>
+              <option value="MP">MP - Northern Mariana Islands</option>
+              <option value="PR">PR - Puerto Rico</option>
+              <option value="VI">VI - U.S. Virgin Islands</option>
             </select>
           </div>
           <div class="mb-3">
-            <label class="form-label">Preferred Programming Languages:</label><br>
+            <label class="form-label">Preferred Programming Languages:</label
+            ><br />
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="language" value="python" id="python">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="language"
+                value="python"
+                id="python"
+              />
               <label class="form-check-label" for="python">Python</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="language" value="html" id="html">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="language"
+                value="html"
+                id="html"
+              />
               <label class="form-check-label" for="html">HTML</label>
             </div>
-          </div>          
+          </div>
           <div class="mb-3">
             <label for="contact" class="form-label">
               Preferred Contact Method
