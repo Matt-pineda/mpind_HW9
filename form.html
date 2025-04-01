@@ -2,21 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Data Collection</title>
+    <title>Business Analytics Student Survey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap 5.3 CSS -->
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome for Tooltip Icon -->
     <script
-      src="https://kit.fontawesome.com/yourkitcode.js"
+      src="https://kit.fontawesome.com/78861a2945.js"
       crossorigin="anonymous"
     ></script>
+
     <style>
+      .form-container {
+        max-width: 700px;
+        margin: 60px auto;
+        padding: 30px;
+        background-color: #f8f9fa;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+
       .fontawesome {
         font-size: 1.15rem;
         color: #333333;
@@ -29,89 +39,77 @@
 
       .tooltip .tooltiptext {
         visibility: hidden;
-        width: 250px;
+        width: 220px;
         background-color: #333333;
         color: #f8f8f8;
-        font-size: 1rem;
-        text-align: left;
+        font-size: 0.95rem;
+        text-align: center;
         border-radius: 6px;
-        padding: 12px;
+        padding: 10px;
         position: absolute;
         z-index: 1;
         top: 100%;
         left: 50%;
-        margin-left: -125px;
+        margin-left: -110px;
       }
 
       .tooltip:hover .tooltiptext {
         visibility: visible;
       }
+
+      .page-footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+      }
     </style>
   </head>
   <body>
     <main class="container">
-      <div class="form-container shadow">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/6/6e/University_of_Iowa_logo.svg"
-          alt="University of Iowa Logo"
-          class="logo"
-        />
+      <div class="form-container">
+        <h1 class="text-center mb-4">Student Survey - Page 1</h1>
 
-        <h1 class="text-center mb-4">Student Info Form</h1>
-
-        <form action="confirm.html" method="get">
+        <!-- Form sends user to form2.html -->
+        <form action="form2.html" method="get">
+          <!-- Home Country (autofocus) -->
           <div class="mb-3">
-            <label for="name" class="form-label"
-              >Name <span class="text-danger">*</span></label
-            >
+            <label for="country" class="form-label">My home country is</label>
             <input
               type="text"
               class="form-control"
-              id="name"
-              name="name"
-              required
+              id="country"
+              name="country"
               autofocus
+              required
             />
           </div>
 
+          <!-- Home Town with Tooltip -->
           <div class="mb-3">
-            <label for="email" class="form-label"
-              >Email <span class="text-danger">*</span></label
-            >
+            <label for="hometown" class="form-label">
+              My home town is
+              <span class="tooltip">
+                <i class="fa-solid fa-circle-info fontawesome"></i>
+                <span class="tooltiptext"
+                  >What town did you live in before coming to college?</span
+                >
+              </span>
+            </label>
             <input
-              type="email"
+              type="text"
               class="form-control"
-              id="email"
-              name="email"
+              id="hometown"
+              name="hometown"
               required
             />
           </div>
-          <div class="mb-3">
-            <label for="gender" class="form-label">
-              Gender Identity
-              <span class="tooltip">
-                <i class="fa-solid fa-circle-info fontawesome"></i>
-                <span class="tooltiptext">
-                  Letting us know how you identify yourself helps us measure and
-                  enhance diversity and inclusivity in tech by addressing
-                  historical gender imbalances.
-                </span>
-              </span>
-            </label>
-            <select class="form-select" id="gender" name="gender" required>
-              <option value="">-- Select an option --</option>
-              <option value="female">Female</option>
-              <option value="male">Male</option>
-              <option value="nonbinary">Non-binary</option>
-              <option value="prefer-not">Prefer not to say</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
+
+          <!-- Home State Dropdown -->
           <div class="mb-3">
             <label for="state-select" class="form-label"
-              >State or Territory</label
+              >My home state is</label
             >
-            <select name="state" id="state-select">
+            <select name="state" id="state-select" class="form-select">
               <option value="">-- choose state/territory --</option>
               <option value="AL">AL</option>
               <option value="AK">AK</option>
@@ -173,103 +171,37 @@
               <option value="VI">VI - U.S. Virgin Islands</option>
             </select>
           </div>
-          <div class="mb-3">
-            <label class="form-label">Preferred Programming Languages:</label
-            ><br />
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                name="language"
-                value="python"
-                id="python"
-              />
-              <label class="form-check-label" for="python">Python</label>
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                name="language"
-                value="html"
-                id="html"
-              />
-              <label class="form-check-label" for="html">HTML</label>
-            </div>
-          </div>
-          <div class="mb-3">
-            <label for="contact" class="form-label">
-              Preferred Contact Method
-              <i
-                class="fas fa-info-circle"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title="Choose the best way to reach you"
-              ></i>
-            </label>
-            <select class="form-select" id="contact" name="contact">
-              <option value="email">Email</option>
-              <option value="phone">Phone</option>
-              <option value="text">Text</option>
+
+          <!-- Impression Dropdown -->
+          <div class="mb-4">
+            <label for="impression" class="form-label"
+              >My impression of the BAIS major is</label
+            >
+            <select
+              name="impression"
+              id="impression"
+              class="form-select"
+              required
+            >
+              <option value="">-- Select one --</option>
+              <option value="5">Very positive, value = 5</option>
+              <option value="4">Somewhat positive, value = 4</option>
+              <option value="3">Neutral, value = 3</option>
+              <option value="2">Somewhat negative, value = 2</option>
+              <option value="1">Very negative, value = 1</option>
             </select>
           </div>
 
-          <div class="mb-3">
-            <label for="food" class="form-label">Favorite Food</label>
-            <input type="text" class="form-control" id="food" name="food" />
+          <!-- Page Footer -->
+          <div class="page-footer">
+            <span class="text-muted">Page 1 of 2</span>
+            <button type="submit" class="btn btn-primary">Next</button>
           </div>
-
-          <div class="mb-3">
-            <label class="form-label">Are you a student at Iowa?</label><br />
-            <div class="form-check form-check-inline">
-              <input
-                type="radio"
-                class="form-check-input"
-                name="student"
-                id="yes"
-                value="yes"
-                required
-              />
-              <label class="form-check-label" for="yes">Yes</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                type="radio"
-                class="form-check-input"
-                name="student"
-                id="no"
-                value="no"
-              />
-              <label class="form-check-label" for="no">No</label>
-            </div>
-          </div>
-
-          <div class="mb-4">
-            <label for="comments" class="form-label">Comments</label>
-            <textarea
-              class="form-control"
-              id="comments"
-              name="comments"
-              rows="3"
-            ></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary w-100">
-            Submit <i class="fas fa-paper-plane ms-1"></i>
-          </button>
         </form>
       </div>
     </main>
 
-    <!-- Bootstrap 5.3 JS (for tooltip) -->
+    <!-- Bootstrap JS for optional components -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      const tooltipTriggerList = document.querySelectorAll(
-        '[data-bs-toggle="tooltip"]'
-      );
-      const tooltipList = [...tooltipTriggerList].map(
-        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
-      );
-    </script>
   </body>
 </html>
